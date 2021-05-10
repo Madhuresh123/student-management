@@ -1,0 +1,37 @@
+html, body {
+    width: 100%;
+    margin: 0; 
+    padding: 0; 
+    overflow-x: hidden;
+  }
+
+
+  /* Create two unequal columns that floats next to each other */
+  .column {
+    float: left;
+    height: 540px;
+    padding: 10px;
+    text-align: center;
+    
+
+  }
+  .left {
+    width: 35%;
+  }
+  
+  .right {
+    width: 65%;
+  }
+  
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+
+  }
+
+/**/
+.label{
+    padding: 10px;
+}
