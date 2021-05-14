@@ -1,0 +1,73 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Sign up
+{% endblock title %}
+
+{% block body %}
+<style>
+  .form-label:after {
+    content:" *";
+    color: red;
+  }
+</style>
+
+<h3 class="text-center my-2">Sign up</h3>
+
+<form class="container-fluid w-50 my-4" method="post" action="/signup">
+{% csrf_token %}
+    <div class="mb-3">
+  <label for="exampleFormControlInput1" class="form-label">Name</label>
+  <input type="name" class="form-control" id="exampleFormControlInput1" name="name" placeholder="Yourname" required>
+    </div>
+
+     <div class="mb-3">
+    <label for="exampleFormControlInput1" class="form-label">Roll No.</label>
+    <input type="number" class="form-control" id="exampleFormControlInput1" name="roll" placeholder="Your roll no." required>
+    </div>
+
+    <div class="mb-3">
+    <label for="exampleFormControlInput1" class="form-label">Email address</label>
+    <input type="email" class="form-control" id="exampleFormControlInput1" name="email" placeholder="name@example.com" required>
+    </div>
+
+    <div class="mb-3">
+    <label for="exampleFormControlInput1" class="form-label">Password</label>
+    <input type="password" class="form-control" id="exampleFormControlInput1" name="password" required >
+    </div>
+
+    <div class="mb-3">
+    <label for="gender" class="form-label">Gender</label>
+    <select name="gender" id="gender">
+    <option value="male">Male</option>
+    <option value="female">Female</option>
+    <option value="other">Others</option>
+  </select>
+    </div>
+
+    <div class="mb-3">
+  <label for="exampleFormControlInput1" class="form-label">Phone No.</label>
+  <input type="number" class="form-control" id="exampleFormControlInput1" name="phone" required>
+    </div>
+
+    <div class="mb-3">
+  <label for="exampleFormControlInput1" class="form-label">D.O.B</label>
+  <input type="date" class="form-control" id="exampleFormControlInput1" name="dob">
+    </div>
+
+
+    <div class="mb-3">
+    <label for="exampleFormControlTextarea1" class="form-label">Address</label>
+    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name="address" required></textarea>
+    </div>
+
+<div class="d-grid gap-2 d-md-block text-center">
+  <button class="btn btn-primary" type="submit">Submit</button>
+</div>
+
+
+</form>
+
+
+
+{% endblock body %}
